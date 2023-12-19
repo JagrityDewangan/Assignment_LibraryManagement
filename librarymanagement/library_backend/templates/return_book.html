@@ -1,0 +1,12 @@
+<!-- This code is for return book page -->
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Return Book</h2>
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Return</button>
+    </form>
+</div>
+{% endblock %}
